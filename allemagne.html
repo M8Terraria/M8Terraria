@@ -21,7 +21,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
       max-width: 1200px;
       margin: 0 auto;
@@ -33,6 +33,9 @@
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       border: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .dish-card:hover {
@@ -47,14 +50,24 @@
     }
 
     .dish-info {
-      padding: 15px;
-      text-align: center;
+      padding: 15px 20px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .dish-info h3 {
-      margin: 10px 0 0 0;
-      font-size: 1.2em;
+      margin-top: 10px;
+      font-size: 1.3em;
       color: #34495e;
+    }
+
+    .dish-info p {
+      margin: 10px 0 0;
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.4;
     }
   </style>
 </head>
@@ -67,6 +80,7 @@
       <img src="images/baguette.jpg" alt="Baguette">
       <div class="dish-info">
         <h3>Baguette</h3>
+        <p>Symbole de la France, la baguette est croustillante à l'extérieur et moelleuse à l'intérieur. Parfaite pour accompagner tous les repas ou simplement avec du beurre.</p>
       </div>
     </div>
 
@@ -74,6 +88,7 @@
       <img src="images/cassoulet.jpg" alt="Cassoulet">
       <div class="dish-info">
         <h3>Cassoulet</h3>
+        <p>Un plat réconfortant du Sud-Ouest à base de haricots blancs, de saucisses et de confit. Long à cuire, mais riche en goût et en tradition.</p>
       </div>
     </div>
 
@@ -81,6 +96,7 @@
       <img src="images/ratatouille.jpg" alt="Ratatouille">
       <div class="dish-info">
         <h3>Ratatouille</h3>
+        <p>Ce plat végétarien de Provence mélange aubergines, courgettes, poivrons et tomates. C’est un festival de saveurs méditerranéennes.</p>
       </div>
     </div>
 
@@ -88,6 +104,7 @@
       <img src="images/boeuf_bourguignon.jpg" alt="Bœuf Bourguignon">
       <div class="dish-info">
         <h3>Bœuf Bourguignon</h3>
+        <p>Un ragoût de bœuf mijoté longuement dans du vin rouge avec des champignons, carottes et oignons. Fondant et riche en goût.</p>
       </div>
     </div>
 
@@ -95,6 +112,7 @@
       <img src="images/quiche_lorraine.jpg" alt="Quiche Lorraine">
       <div class="dish-info">
         <h3>Quiche Lorraine</h3>
+        <p>Une tarte salée à base de crème, œufs et lardons. Délicieuse chaude ou froide, avec une salade verte.</p>
       </div>
     </div>
 
@@ -102,6 +120,7 @@
       <img src="images/tarte_tatin.jpg" alt="Tarte Tatin">
       <div class="dish-info">
         <h3>Tarte Tatin</h3>
+        <p>Une tarte renversée aux pommes caramélisées, née d’une erreur de cuisson. Croustillante, fondante, irrésistible.</p>
       </div>
     </div>
 
@@ -109,6 +128,7 @@
       <img src="images/crepes.jpg" alt="Crêpes">
       <div class="dish-info">
         <h3>Crêpes</h3>
+        <p>Sucrées ou salées, les crêpes sont légères et gourmandes. À déguster avec du sucre, du chocolat, ou du jambon-fromage.</p>
       </div>
     </div>
 
@@ -116,6 +136,7 @@
       <img src="images/escargots.jpg" alt="Escargots">
       <div class="dish-info">
         <h3>Escargots de Bourgogne</h3>
+        <p>Préparés avec du beurre, de l’ail et du persil, les escargots sont une entrée typiquement française au goût raffiné.</p>
       </div>
     </div>
   </div>
