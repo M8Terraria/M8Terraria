@@ -9,86 +9,81 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #f0f2f5;
       margin: 0;
-      padding: 20px;
+      padding: 30px 20px;
+      color: #2c3e50;
     }
 
     h1 {
       text-align: center;
-      color: #2c3e50;
+      font-size: 2.5em;
+      margin-bottom: 40px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    .dish-box {
-      position: relative;
+    .dish-card {
+      background-color: #ffffff;
+      border-radius: 15px;
       overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      background-color: white;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e0e0;
     }
 
-    .dish-box:hover {
-      transform: scale(1.03);
+    .dish-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
 
-    .dish-box img {
+    .dish-card img {
       width: 100%;
-      height: auto;
-      display: block;
+      height: 180px;
+      object-fit: cover;
     }
 
-    .dish-name {
+    .dish-info {
       padding: 15px;
       text-align: center;
-      font-weight: bold;
+    }
+
+    .dish-info h3 {
+      margin: 10px 0 0 0;
+      font-size: 1.2em;
       color: #34495e;
-      background: #ecf0f1;
     }
   </style>
 </head>
 <body>
 
-  <h1>🇫🇷 Spécialités Culinaires Françaises</h1>
-  <div class="grid">
-    <div class="dish-box">
-      <img src="images/baguette.jpg" alt="Baguette">
-      <div class="dish-name">Baguette</div>
-    </div>
-    <div class="dish-box">
-      <img src="images/cassoulet.jpg" alt="Cassoulet">
-      <div class="dish-name">Cassoulet</div>
-    </div>
-    <div class="dish-box">
-      <img src="images/ratatouille.jpg" alt="Ratatouille">
-      <div class="dish-name">Ratatouille</div>
-    </div>
-    <div class="dish-box">
-      <img src="images/boeuf_bourguignon.jpg" alt="Bœuf Bourguignon">
-      <div class="dish-name">Bœuf Bourguignon</div>
-    </div>
-    <div class="dish-box">
-      <img src="images/quiche_lorraine.jpg" alt="Quiche Lorraine">
-      <div class="dish-name">Quiche Lorraine</div>
-    </div>
-    <div class="dish-box">
-      <img src="images/tarte_tatin.jpg" alt="Tarte Tatin">
-      <div class="dish-name">Tarte Tatin</div>
-    </div>
-    <div class="dish-box">
-      <img src="images/crepes.jpg" alt="Crêpes">
-      <div class="dish-name">Crêpes</div>
-    </div>
-    <div class="dish-box">
-      <img src="images/escargots.jpg" alt="Escargots de Bourgogne">
-      <div class="dish-name">Escargots de Bourgogne</div>
-    </div>
-  </div>
+  <h1>🇫🇷 Les Délices de la Cuisine Française</h1>
 
-</body>
-</html>
+  <div class="grid">
+    <div class="dish-card">
+      <img src="images/baguette.jpg" alt="Baguette">
+      <div class="dish-info">
+        <h3>Baguette</h3>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="images/cassoulet.jpg" alt="Cassoulet">
+      <div class="dish-info">
+        <h3>Cassoulet</h3>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="images/ratatouille.jpg" alt="Ratatouille">
+      <div class="dish-info">
+        <h3>Ratatouille</h3>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="images/boeuf_bourguignon.jpg" alt="Bœuf Bourguignon">
+      <div class="dish
