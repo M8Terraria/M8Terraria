@@ -2,85 +2,144 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Trois cadres d'images avec zones de texte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spécialités Françaises</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 30px 20px;
+      color: #2c3e50;
     }
 
-    .container {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .image-box {
-      width: 30%;
+    h1 {
       text-align: center;
-      margin-bottom: 20px;
+      font-size: 2.5em;
+      margin-bottom: 40px;
     }
 
-    .image-frame {
-      width: 100%;
-      height: 200px;
-      border: 2px solid #ccc;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dish-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e0e0;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #f9f9f9;
+      flex-direction: column;
+      height: 100%;
     }
 
-    .image-frame img {
-      max-width: 100%;
-      max-height: 100%;
+    .dish-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
 
-    .text-box {
-      margin-top: 10px;
-    }
-
-    .text-box input {
+    .dish-card img {
       width: 100%;
-      padding: 8px;
-      box-sizing: border-box;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .dish-info {
+      padding: 15px 20px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dish-info h3 {
+      margin-top: 10px;
+      font-size: 1.3em;
+      color: #34495e;
+    }
+
+    .dish-info p {
+      margin: 10px 0 0;
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.4;
     }
   </style>
 </head>
 <body>
 
-  <h2>Galerie avec zones de texte</h2>
+  <h1>🇫🇷 Les Délices de la Cuisine Française</h1>
 
-  <div class="container">
-    <div class="image-box">
-      <div class="image-frame">
-        <img src="escargots.png" alt="Image 1">
-      </div>
-      <div class="text-box"> La viennoiserie est un symbole du petit-déjeuner à la française, souvent dégustée avec un café ou un chocolat chaud. Elle représente un savoir-faire apprécié dans le monde entier, avec des adaptations locales (croissants fourrés, brioches aromatisées, etc.).
-        
+  <div class="grid">
+    <div class="dish-card">
+      <img src="images/baguette.jpg" alt="Baguette">
+      <div class="dish-info">
+        <h3>Baguette</h3>
+        <p>Symbole de la France, la baguette est croustillante à l'extérieur et moelleuse à l'intérieur. Parfaite pour accompagner tous les repas ou simplement avec du beurre.</p>
       </div>
     </div>
 
-    <div class="image-box">
-      <div class="image-frame">
-        <img src="https://via.placeholder.com/150" alt="Image 2">
-      </div>
-      <div class="text-box">
-        <input type="text" placeholder="Texte pour l'image 2">
+    <div class="dish-card">
+      <img src="images/cassoulet.jpg" alt="Cassoulet">
+      <div class="dish-info">
+        <h3>Cassoulet</h3>
+        <p>Un plat réconfortant du Sud-Ouest à base de haricots blancs, de saucisses et de confit. Long à cuire, mais riche en goût et en tradition.</p>
       </div>
     </div>
 
-    <div class="image-box">
-      <div class="image-frame">
-        <img src="viennoiseries.png" alt="Image 3">
+    <div class="dish-card">
+      <img src="images/ratatouille.jpg" alt="Ratatouille">
+      <div class="dish-info">
+        <h3>Ratatouille</h3>
+        <p>Ce plat végétarien de Provence mélange aubergines, courgettes, poivrons et tomates. C’est un festival de saveurs méditerranéennes.</p>
       </div>
-      <div class="text-box"> La viennoiserie est un symbole du petit-déjeuner à la française, souvent dégustée avec un café ou un chocolat chaud. Elle représente un savoir-faire apprécié dans le monde entier, avec des adaptations locales (croissants fourrés, brioches aromatisées, etc.).</div>
+    </div>
+
+    <div class="dish-card">
+      <img src="images/boeuf_bourguignon.jpg" alt="Bœuf Bourguignon">
+      <div class="dish-info">
+        <h3>Bœuf Bourguignon</h3>
+        <p>Un ragoût de bœuf mijoté longuement dans du vin rouge avec des champignons, carottes et oignons. Fondant et riche en goût.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="images/quiche_lorraine.jpg" alt="Quiche Lorraine">
+      <div class="dish-info">
+        <h3>Quiche Lorraine</h3>
+        <p>Une tarte salée à base de crème, œufs et lardons. Délicieuse chaude ou froide, avec une salade verte.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="images/tarte_tatin.jpg" alt="Tarte Tatin">
+      <div class="dish-info">
+        <h3>Tarte Tatin</h3>
+        <p>Une tarte renversée aux pommes caramélisées, née d’une erreur de cuisson. Croustillante, fondante, irrésistible.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="images/crepes.jpg" alt="Crêpes">
+      <div class="dish-info">
+        <h3>Crêpes</h3>
+        <p>Sucrées ou salées, les crêpes sont légères et gourmandes. À déguster avec du sucre, du chocolat, ou du jambon-fromage.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="images/escargots.jpg" alt="Escargots">
+      <div class="dish-info">
+        <h3>Escargots de Bourgogne</h3>
+        <p>Préparés avec du beurre, de l’ail et du persil, les escargots sont une entrée typiquement française au goût raffiné.</p>
       </div>
     </div>
   </div>
 
 </body>
 </html>
-
-   
-     
