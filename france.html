@@ -2,67 +2,86 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Explore le Monde</title>
+  <title>Trois cadres d'images avec zones de texte</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f2f5;
-      margin: 0;
+      font-family: Arial, sans-serif;
       padding: 20px;
     }
 
-    h1 {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .image-box {
+      width: 30%;
       text-align: center;
-      color: #2c3e50;
+      margin-bottom: 20px;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .country-box {
-      position: relative;
-      cursor: pointer;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .country-box:hover {
-      transform: scale(1.05);
-    }
-
-    .country-box img {
+    .image-frame {
       width: 100%;
-      height: auto;
-      display: block;
+      height: 200px;
+      border: 2px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f9f9f9;
     }
 
-    .country-name {
-      position: absolute;
-      bottom: 0;
-      left: 0;
+    .image-frame img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .text-box {
+      margin-top: 10px;
+    }
+
+    .text-box input {
       width: 100%;
-      background: rgba(0,0,0,0.6);
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      font-weight: bold;
+      padding: 8px;
+      box-sizing: border-box;
     }
   </style>
 </head>
 <body>
 
-  <h1>🌍 Bienvenue en France </h1>
-  <div class="grid">
-    <a href="france.html" class="country-box"> 
-      <img src="viennoiserie.png" alt="France">
-             </div>
+  <h2>Galerie avec zones de texte</h2>
+
+  <div class="container">
+    <div class="image-box">
+      <div class="image-frame">
+        <img src="https://via.placeholder.com/150" alt="Image 1">
+      </div>
+      <div class="text-box">
+        <input type="text" placeholder="Texte pour l'image 1">
+      </div>
+    </div>
+
+    <div class="image-box">
+      <div class="image-frame">
+        <img src="https://via.placeholder.com/150" alt="Image 2">
+      </div>
+      <div class="text-box">
+        <input type="text" placeholder="Texte pour l'image 2">
+      </div>
+    </div>
+
+    <div class="image-box">
+      <div class="image-frame">
+        <img src="viennoiseries.png" alt="Image 3">
+      </div>
+      <div class="text-box">
+        <input type="text" placeholder="Texte pour l'image 3">
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
+
+   
+     
