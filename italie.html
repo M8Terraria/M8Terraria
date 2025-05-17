@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spécialités Italiennes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 30px 20px;
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dish-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .dish-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .dish-info {
+      padding: 15px 20px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dish-info h3 {
+      margin-top: 10px;
+      font-size: 1.3em;
+      color: #34495e;
+    }
+
+    .dish-info p {
+      margin: 10px 0 0;
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🇮🇹 Les Délices de la Cuisine Italienne</h1>
+
+  <div class="grid">
+    <div class="dish-card">
+      <img src="image_pizza.png" alt="Pizza Margherita">
+      <div class="dish-info">
+        <h3>Pizza Margherita</h3>
+        <p>La reine des pizzas, simple et savoureuse avec sa sauce tomate, sa mozzarella et son basilic frais.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_pasta.png" alt="Pâtes Carbonara">
+      <div class="dish-info">
+        <h3>Pâtes Carbonara</h3>
+        <p>Des pâtes crémeuses avec du guanciale, des œufs et du fromage pecorino. Un classique romain.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_lasagna.png" alt="Lasagne">
+      <div class="dish-info">
+        <h3>Lasagne</h3>
+        <p>Des couches de pâtes, sauce bolognaise, béchamel et fromage gratiné. Un plat réconfortant.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_risotto.png" alt="Risotto">
+      <div class="dish-info">
+        <h3>Risotto</h3>
+        <p>Crémeux et savoureux, ce riz mijoté est parfumé au vin blanc et au fromage. Délicieux avec des champignons ou des fruits de mer.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_tiramisu.png" alt="Tiramisu">
+      <div class="dish-info">
+        <h3>Tiramisu</h3>
+        <p>Un dessert emblématique avec des couches de mascarpone, café et cacao. Doux et savoureux.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
