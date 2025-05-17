@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spécialités Anglaises</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 30px 20px;
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dish-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .dish-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .dish-info {
+      padding: 15px 20px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dish-info h3 {
+      margin-top: 10px;
+      font-size: 1.3em;
+      color: #34495e;
+    }
+
+    .dish-info p {
+      margin: 10px 0 0;
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🇬🇧 Les Délices de la Cuisine Anglaise</h1>
+
+  <div class="grid">
+    <div class="dish-card">
+      <img src="image_fish_chips.png" alt="Fish and Chips">
+      <div class="dish-info">
+        <h3>Fish and Chips</h3>
+        <p>Poisson frit croustillant accompagné de frites épaisses, souvent servi avec du vinaigre de malt.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_roast_beef.png" alt="Roast Beef">
+      <div class="dish-info">
+        <h3>Roast Beef</h3>
+        <p>Bœuf rôti, servi traditionnellement avec du Yorkshire pudding, des pommes de terre rôties et des légumes.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_full_english.png" alt="Full English Breakfast">
+      <div class="dish-info">
+        <h3>Full English Breakfast</h3>
+        <p>Petit-déjeuner complet avec des saucisses, du bacon, des œufs, des haricots, des tomates et des champignons.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_shepherds_pie.png" alt="Shepherd's Pie">
+      <div class="dish-info">
+        <h3>Shepherd's Pie</h3>
+        <p>Gratin de viande d'agneau hachée avec une purée de pommes de terre dorée au four.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_cream_tea.png" alt="Cream Tea">
+      <div class="dish-info">
+        <h3>Cream Tea</h3>
+        <p>Thé accompagné de scones, de crème épaisse et de confiture, un classique de l'heure du thé.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
