@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spécialités Brésiliennes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 30px 20px;
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dish-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .dish-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .dish-info {
+      padding: 15px 20px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dish-info h3 {
+      margin-top: 10px;
+      font-size: 1.3em;
+      color: #34495e;
+    }
+
+    .dish-info p {
+      margin: 10px 0 0;
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🇧🇷 Les Délices de la Cuisine Brésilienne</h1>
+
+  <div class="grid">
+    <div class="dish-card">
+      <img src="image_feijoada.png" alt="Feijoada">
+      <div class="dish-info">
+        <h3>Feijoada</h3>
+        <p>Ragoût de haricots noirs avec de la viande de porc, servi avec du riz, du chou et des tranches d'orange.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_pao_de_queijo.png" alt="Pão de Queijo">
+      <div class="dish-info">
+        <h3>Pão de Queijo</h3>
+        <p>Petits pains moelleux au fromage, croustillants à l'extérieur et fondants à l'intérieur. Parfaits pour le petit-déjeuner.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_brigadeiro.png" alt="Brigadeiro">
+      <div class="dish-info">
+        <h3>Brigadeiro</h3>
+        <p>Confiserie à base de lait concentré, cacao et beurre, enrobée de vermicelles de chocolat.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_acai.png" alt="Açaï Bowl">
+      <div class="dish-info">
+        <h3>Açaï Bowl</h3>
+        <p>Bol de purée d'açaï, accompagné de fruits frais, de granola et de miel. Rafraîchissant et énergisant.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_moqueca.png" alt="Moqueca">
+      <div class="dish-info">
+        <h3>Moqueca</h3>
+        <p>Ragoût de poisson ou de fruits de mer avec du lait de coco, des tomates, des poivrons et de la coriandre.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
