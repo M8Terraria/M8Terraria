@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spécialités des États-Unis</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 30px 20px;
+      color: #2c3e50;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .dish-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .dish-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    .dish-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .dish-info {
+      padding: 15px 20px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .dish-info h3 {
+      margin-top: 10px;
+      font-size: 1.3em;
+      color: #34495e;
+    }
+    .dish-info p {
+      margin: 10px 0 0;
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🇺🇸 Les Délices de la Cuisine Américaine</h1>
+
+  <div class="grid">
+    <div class="dish-card">
+      <img src="image_burger.png" alt="Burger" />
+      <div class="dish-info">
+        <h3>Burger</h3>
+        <p>Un classique américain, un steak haché grillé dans un pain moelleux, souvent garni de fromage, laitue, tomate et sauce.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_macaroni_cheese.png" alt="Macaroni au fromage" />
+      <div class="dish-info">
+        <h3>Macaroni au fromage</h3>
+        <p>Pâtes au fromage gratinées, crémeuses et réconfortantes, un plat familial très populaire.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_bbq_ribs.png" alt="Côtes levées BBQ" />
+      <div class="dish-info">
+        <h3>Côtes levées BBQ</h3>
+        <p>Côtes de porc marinées et grillées lentement avec une sauce barbecue sucrée et épicée.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_clam_chowder.png" alt="Clam Chowder" />
+      <div class="dish-info">
+        <h3>Clam Chowder</h3>
+        <p>Soupe crémeuse aux palourdes, pommes de terre, céleri et oignons, très appréciée sur la côte Est.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_pancakes.png" alt="Pancakes" />
+      <div class="dish-info">
+        <h3>Pancakes</h3>
+        <p>Crêpes épaisses et moelleuses, souvent servies au petit-déjeuner avec du sirop d'érable et du beurre.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
