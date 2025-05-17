@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spécialités Japonaises</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 30px 20px;
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dish-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .dish-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .dish-info {
+      padding: 15px 20px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dish-info h3 {
+      margin-top: 10px;
+      font-size: 1.3em;
+      color: #34495e;
+    }
+
+    .dish-info p {
+      margin: 10px 0 0;
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🇯🇵 Les Délices de la Cuisine Japonaise</h1>
+
+  <div class="grid">
+    <div class="dish-card">
+      <img src="image_sushi.png" alt="Sushi">
+      <div class="dish-info">
+        <h3>Sushi</h3>
+        <p>Tranches de poisson cru posées sur du riz vinaigré, souvent accompagnées de wasabi et de sauce soja.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_ramen.png" alt="Ramen">
+      <div class="dish-info">
+        <h3>Ramen</h3>
+        <p>Soupe de nouilles servie avec du bouillon, de la viande, des œufs marinés et des légumes. Réconfortante et savoureuse.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_tempura.png" alt="Tempura">
+      <div class="dish-info">
+        <h3>Tempura</h3>
+        <p>Beignets légers de crevettes ou de légumes, frits à la perfection et accompagnés d'une sauce légère.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_tonkatsu.png" alt="Tonkatsu">
+      <div class="dish-info">
+        <h3>Tonkatsu</h3>
+        <p>Côtelette de porc panée et frite, servie avec du chou râpé et une sauce tonkatsu.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_mochi.png" alt="Mochi">
+      <div class="dish-info">
+        <h3>Mochi</h3>
+        <p>Pâtisserie faite de riz gluant, parfois fourrée d’anko (pâte de haricots rouges). Moelleux et sucré.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
