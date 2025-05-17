@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spécialités Russes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 30px 20px;
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dish-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .dish-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .dish-info {
+      padding: 15px 20px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dish-info h3 {
+      margin-top: 10px;
+      font-size: 1.3em;
+      color: #34495e;
+    }
+
+    .dish-info p {
+      margin: 10px 0 0;
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🇷🇺 Les Délices de la Cuisine Russe</h1>
+
+  <div class="grid">
+    <div class="dish-card">
+      <img src="image_bortsch.png" alt="Bortsch">
+      <div class="dish-info">
+        <h3>Bortsch</h3>
+        <p>Soupe traditionnelle à base de betteraves, de viande et de légumes, servie chaude avec une cuillerée de crème aigre.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_pelmeni.png" alt="Pelmeni">
+      <div class="dish-info">
+        <h3>Pelmeni</h3>
+        <p>Raviolis russes farcis de viande, généralement servis avec du beurre ou de la crème aigre.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_blini.png" alt="Blini">
+      <div class="dish-info">
+        <h3>Blini</h3>
+        <p>Crêpes fines servies avec du caviar, de la crème fraîche ou de la confiture. Délicates et savoureuses.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_salade_olivier.png" alt="Salade Olivier">
+      <div class="dish-info">
+        <h3>Salade Olivier</h3>
+        <p>Salade de pommes de terre, carottes, cornichons, petits pois et mayonnaise. Indispensable lors des fêtes.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_stroganoff.png" alt="Bœuf Stroganoff">
+      <div class="dish-info">
+        <h3>Bœuf Stroganoff</h3>
+        <p>Morceaux de bœuf mijotés dans une sauce crémeuse aux champignons et aux oignons. Servi avec des pâtes ou du riz.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
