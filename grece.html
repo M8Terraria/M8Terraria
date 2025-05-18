@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spécialités Grecques</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 30px 20px;
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dish-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .dish-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .dish-info {
+      padding: 15px 20px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dish-info h3 {
+      margin-top: 10px;
+      font-size: 1.3em;
+      color: #34495e;
+    }
+
+    .dish-info p {
+      margin: 10px 0 0;
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🇬🇷 Les Délices de la Cuisine Grecque</h1>
+
+  <div class="grid">
+    <div class="dish-card">
+      <img src="image_moussaka.png" alt="Moussaka">
+      <div class="dish-info">
+        <h3>Moussaka</h3>
+        <p>Gratin d'aubergines, de viande hachée et de béchamel, riche en saveurs méditerranéennes.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_tzatziki.png" alt="Tzatziki">
+      <div class="dish-info">
+        <h3>Tzatziki</h3>
+        <p>Sauce fraîche à base de yaourt, concombres râpés, ail et herbes.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_souvlaki.png" alt="Souvlaki">
+      <div class="dish-info">
+        <h3>Souvlaki</h3>
+        <p>Brochettes de viande marinée grillées, servies avec du pain pita et des légumes.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_greek_salad.png" alt="Salade Grecque">
+      <div class="dish-info">
+        <h3>Salade Grecque</h3>
+        <p>Salade colorée de tomates, concombres, poivrons, oignons, feta et olives.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_baklava.png" alt="Baklava">
+      <div class="dish-info">
+        <h3>Baklava</h3>
+        <p>Pâtisserie feuilletée garnie de noix et arrosée de sirop de miel.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
