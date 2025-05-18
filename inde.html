@@ -77,10 +77,10 @@
 
   <div class="grid">
     <div class="dish-card">
-      <img src="image_curry.png" alt="Curry">
+      <img id="curry" src="image_curry.png" alt="Curry" onclick="changerImage()">
       <div class="dish-info">
-        <h3>Curry</h3>
-        <p>Plat épicé préparé avec des légumes, de la viande ou du poisson, mijoté dans une sauce aromatique.</p>
+        <h3 id="titre-curry">Curry</h3>
+        <p id="desc-curry">Plat épicé préparé avec des légumes, de la viande ou du poisson, mijoté dans une sauce aromatique.</p>
       </div>
     </div>
 
@@ -116,6 +116,23 @@
       </div>
     </div>
   </div>
-
+  <script>
+    function changerImage() {
+      const image = document.getElementById("curry");
+      const titre = document.getElementById("titre-curry");
+      const description = document.getElementById("desc-curry");
+      if (image.src.includes("image_curry.png")) {
+        image.src = "image_steph_curry.png";
+        image.alt = "Stephen Curry";
+        titre.textContent = "Stephen Curry";
+        description.textContent = "Un joueur tellement bon que vous en reprendrez.";
+      } else {
+        image.src = "image_curry.png";
+        image.alt = "Curry";
+        titre.textContent = "Curry";
+        description.textContent = "Plat épicé préparé avec des légumes, de la viande ou du poisson, mijoté dans une sauce aromatique.";
+      }
+    }
+  </script>
 </body>
 </html>
