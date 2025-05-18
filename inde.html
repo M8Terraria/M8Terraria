@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spécialités Indiennes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 30px 20px;
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dish-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .dish-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .dish-info {
+      padding: 15px 20px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dish-info h3 {
+      margin-top: 10px;
+      font-size: 1.3em;
+      color: #34495e;
+    }
+
+    .dish-info p {
+      margin: 10px 0 0;
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🇮🇳 Les Délices de la Cuisine Indienne</h1>
+
+  <div class="grid">
+    <div class="dish-card">
+      <img src="image_curry.png" alt="Curry">
+      <div class="dish-info">
+        <h3>Curry</h3>
+        <p>Plat épicé préparé avec des légumes, de la viande ou du poisson, mijoté dans une sauce aromatique.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_biryani.png" alt="Biryani">
+      <div class="dish-info">
+        <h3>Biryani</h3>
+        <p>Riz parfumé mélangé avec des épices, de la viande ou des légumes, souvent servi avec du raita.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_naan.png" alt="Naan">
+      <div class="dish-info">
+        <h3>Naan</h3>
+        <p>Pain plat traditionnel, souvent garni d'ail, cuit dans un four tandoor.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_samosa.png" alt="Samosa">
+      <div class="dish-info">
+        <h3>Samosa</h3>
+        <p>Beignets triangulaires farcis de légumes ou de viande, croustillants et épicés.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_tandoori.png" alt="Poulet Tandoori">
+      <div class="dish-info">
+        <h3>Poulet Tandoori</h3>
+        <p>Poulet mariné aux épices et yaourt, rôti dans un four tandoor, offrant une saveur fumée.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
