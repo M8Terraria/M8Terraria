@@ -60,31 +60,33 @@
 
   <h1>🌍 Explore les Spécialités du Monde</h1>
 
-  <!-- Carte interactive -->
+  <!-- Carte interactive centrée -->
   <h2>Carte interactive</h2>
-  <div style="position: relative; display: inline-block; max-width: 100%;">
-    <img src="image_carte.png" alt="Carte du Monde" style="width: 100%; max-width: 600px; display: block;" />
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
-      <div
-        style="position: absolute; left: 40%; top: 30%; width: 5%; height: 5%; background-color: rgba(255, 0, 0, 0.4); border-radius: 5px; pointer-events: auto; transition: background-color 0.3s ease;"
-        onclick="location.href='france.html'"
-        tabindex="0"
-        role="link"
-        title="France"
-        aria-label="Lien vers France"
-        onmouseover="this.style.backgroundColor='rgba(0, 128, 0, 0.6)'"
-        onmouseout="this.style.backgroundColor='rgba(255, 0, 0, 0.4)'"
-      ></div>
-      <div
-        style="position: absolute; left: 80%; top: 20%; width: 5%; height: 5%; background-color: rgba(255, 0, 0, 0.4); border-radius: 5px; pointer-events: auto; transition: background-color 0.3s ease;"
-        onclick="location.href='japon.html'"
-        tabindex="0"
-        role="link"
-        title="Japon"
-        aria-label="Lien vers Japon"
-        onmouseover="this.style.backgroundColor='rgba(0, 128, 0, 0.6)'"
-        onmouseout="this.style.backgroundColor='rgba(255, 0, 0, 0.4)'"
-      ></div>
+  <div style="text-align: center;">
+    <div style="position: relative; display: inline-block; max-width: 100%;">
+      <img src="image_carte.png" alt="Carte du Monde" style="width: 100%; max-width: 600px; display: block;" />
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
+        <div
+          style="position: absolute; left: 40%; top: 30%; width: 5%; height: 5%; background-color: rgba(255, 0, 0, 0.4); border-radius: 5px; pointer-events: auto; transition: background-color 0.3s ease;"
+          onclick="location.href='france.html'"
+          tabindex="0"
+          role="link"
+          title="France"
+          aria-label="Lien vers France"
+          onmouseover="this.style.backgroundColor='rgba(0, 128, 0, 0.6)'"
+          onmouseout="this.style.backgroundColor='rgba(255, 0, 0, 0.4)'"
+        ></div>
+        <div
+          style="position: absolute; left: 80%; top: 20%; width: 5%; height: 5%; background-color: rgba(255, 0, 0, 0.4); border-radius: 5px; pointer-events: auto; transition: background-color 0.3s ease;"
+          onclick="location.href='japon.html'"
+          tabindex="0"
+          role="link"
+          title="Japon"
+          aria-label="Lien vers Japon"
+          onmouseover="this.style.backgroundColor='rgba(0, 128, 0, 0.6)'"
+          onmouseout="this.style.backgroundColor='rgba(255, 0, 0, 0.4)'"
+        ></div>
+      </div>
     </div>
   </div>
 
@@ -161,6 +163,7 @@
   </div>
 
   <script>
+    // Permet d'ouvrir le lien avec Enter ou Espace sur les zones de la carte
     document.querySelectorAll('div[role="link"]').forEach(zone => {
       zone.addEventListener('keydown', e => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -170,5 +173,6 @@
       });
     });
   </script>
+
 </body>
 </html>
