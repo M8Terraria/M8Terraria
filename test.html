@@ -54,83 +54,66 @@
       padding: 10px 0;
       font-weight: bold;
     }
+
+    .map-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .map-container img {
+      width: 100%; 
+      max-width: 1200px; /* Agrandissement de la carte */
+      height: auto;
+    }
+
+    .info-message {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 1.2em;
+      color: #2c3e50;
+    }
   </style>
 </head>
 <body>
 
   <h1>🌍 Explore les Spécialités du Monde</h1>
+  <div class="info-message">🗺️ Cliquez sur la carte pour découvrir les spécialités culinaires de chaque pays !</div>
+  
+  <!-- Carte du monde cliquable -->
+  <div class="map-container">
+    <img src="image_carte.png" alt="Carte du Monde" usemap="#worldmap" style="width: 100%; max-width: 1200px;">
+    <map name="worldmap">
+      <!-- Coordonnées recalibrées pour une carte plus grande -->
+      <area shape="rect" coords="500, 300, 550, 350" href="france.html" alt="France">
+      <area shape="rect" coords="900, 250, 950, 300" href="japon.html" alt="Japon">
+      <area shape="rect" coords="300, 500, 350, 550" href="bresil.html" alt="Brésil">
+      <area shape="rect" coords="400, 250, 450, 300" href="angleterre.html" alt="Angleterre">
+      <area shape="rect" coords="520, 300, 570, 350" href="italie.html" alt="Italie">
+      <area shape="rect" coords="510, 280, 560, 330" href="espagne.html" alt="Espagne">
+      <area shape="rect" coords="700, 180, 750, 230" href="russie.html" alt="Russie">
+      <area shape="rect" coords="150, 300, 200, 350" href="etats_unies.html" alt="États-Unis">
+      <area shape="rect" coords="570, 250, 620, 300" href="allemagne.html" alt="Allemagne">
+      <area shape="rect" coords="600, 400, 650, 450" href="turquie.html" alt="Turquie">
+      <area shape="rect" coords="250, 600, 300, 650" href="argentine.html" alt="Argentine">
+      <area shape="rect" coords="650, 450, 700, 500" href="liban.html" alt="Liban">
+      <area shape="rect" coords="550, 500, 600, 550" href="maroc.html" alt="Maroc">
+      <area shape="rect" coords="200, 400, 250, 450" href="mexique.html" alt="Mexique">
+      <area shape="rect" coords="850, 350, 900, 400" href="chine.html" alt="Chine">
+      <area shape="rect" coords="800, 400, 850, 450" href="inde.html" alt="Inde">
+      <area shape="rect" coords="600, 320, 650, 370" href="grece.html" alt="Grèce">
+    </map>
+  </div>
+  
+  <div class="info-message">🇺🇳 Vous pouvez également cliquer sur les drapeaux en dessous pour explorer chaque pays individuellement.</div>
+
+  <!-- Grille des drapeaux cliquables -->
   <div class="grid">
-    <a href="france.html" class="country-box"> 
-      <img src="image_france.png" alt="France">
-      <div class="country-name">France</div>
-    </a>
-    <a href="japon.html" class="country-box">
-      <img src="image_japon.png" alt="Japon">
-      <div class="country-name">Japon</div>
-    </a>
-    <a href="bresil.html" class="country-box">
-      <img src="image_bresil.png" alt="Brésil">
-      <div class="country-name">Brésil</div>
-    </a>
-    <a href="angleterre.html" class="country-box">
-      <img src="image_angleterre.png" alt="Angleterre">
-      <div class="country-name">Angleterre</div>
-    </a>
-    <a href="italie.html" class="country-box">
-      <img src="image_italie.png" alt="Italie">
-      <div class="country-name">Italie</div>
-    </a>
-    <a href="espagne.html" class="country-box">
-      <img src="image_espagne.png" alt="Espagne">
-      <div class="country-name">Espagne</div>
-    </a>
-    <a href="russie.html" class="country-box">
-      <img src="image_russie.png" alt="Russie">
-      <div class="country-name">Russie</div>
-    </a>
-    <a href="etats_unies.html" class="country-box">
-      <img src="image_Etats_Unies.png" alt="Etats Unies">
-      <div class="country-name">Etats Unies</div>
-    </a>
-    <a href="allemagne.html" class="country-box">
-      <img src="image_allemagne.png" alt="Allemagne">
-      <div class="country-name">Allemagne</div>
-    </a>
-    <a href="turquie.html" class="country-box">
-      <img src="image_turquie.png" alt="Turquie">
-      <div class="country-name">Turquie</div>
-    </a>
-    <a href="argentine.html" class="country-box">
-      <img src="image_argentine.png" alt="Argentine">
-      <div class="country-name">Argentine</div>
-    </a>
-    <a href="liban.html" class="country-box">
-      <img src="image_liban.png" alt="Liban">
-      <div class="country-name">Liban</div>
-    </a>
-    <a href="maroc.html" class="country-box">
-      <img src="image_maroc.png" alt="Maroc">
-      <div class="country-name">Maroc</div>
-    </a>
-    <a href="mexique.html" class="country-box">
-      <img src="image_mexique.png" alt="Mexique">
-      <div class="country-name">Mexique</div>
-    </a>
-    <a href="chine.html" class="country-box">
-      <img src="image_chine.png" alt="Chine">
-      <div class="country-name">Chine</div>
-    </a>
-    <a href="inde.html" class="country-box">
-      <img src="image_inde.png" alt="Inde">
-      <div class="country-name">Inde</div>
-    </a>
-    <a href="grece.html" class="country-box">
-      <img src="image_grece.png" alt="Grèce">
-      <div class="country-name">Grèce</div>
-    </a>
-    
-    
-    
+    <a href="france.html" class="country-box"><img src="image_france.png" alt="France"><div class="country-name">France</div></a>
+    <a href="japon.html" class="country-box"><img src="image_japon.png" alt="Japon"><div class="country-name">Japon</div></a>
+    <a href="bresil.html" class="country-box"><img src="image_bresil.png" alt="Brésil"><div class="country-name">Brésil</div></a>
+    <a href="angleterre.html" class="country-box"><img src="image_angleterre.png" alt="Angleterre"><div class="country-name">Angleterre</div></a>
+    <a href="italie.html" class="country-box"><img src="image_italie.png" alt="Italie"><div class="country-name">Italie</div></a>
+    <a href="espagne.html" class="country-box"><img src="image_espagne.png" alt="Espagne"><div class="country-name">Espagne</div></a>
   </div>
 
 </body>
