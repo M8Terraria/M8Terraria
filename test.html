@@ -2,7 +2,177 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explore le Monde</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .map-container {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .map-container img {
+      width: 900px;
+      max-width: 98vw;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.07);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .country-box {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .country-box:hover {
+      transform: scale(1.05);
+    }
+
+    .country-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .country-name {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌍 Explore les Spécialités du Monde</h1>
+  
+  <!-- Carte du monde cliquable -->
+  <div class="map-container">
+    <img src="image_carte4.png" usemap="#carte-monde" alt="Carte du monde">
+    <map name="carte-monde">
+      <!-- Coordonnées fictives pour 900px de largeur d'image, à ajuster pour chaque pays -->
+      <area shape="poly" coords="145,210,155,230,175,220,160,200" href="france.html" alt="France" title="France">
+      <area shape="poly" coords="790,200,820,210,825,185,800,175" href="japon.html" alt="Japon" title="Japon">
+      <area shape="poly" coords="280,540,300,590,340,570,320,530" href="bresil.html" alt="Brésil" title="Brésil">
+      <area shape="poly" coords="110,110,140,130,165,120,140,100" href="angleterre.html" alt="Angleterre" title="Angleterre">
+      <area shape="poly" coords="220,275,245,285,255,265,235,250" href="italie.html" alt="Italie" title="Italie">
+      <area shape="poly" coords="90,250,120,270,160,250,130,230" href="espagne.html" alt="Espagne" title="Espagne">
+      <area shape="poly" coords="410,95,500,110,520,85,450,70" href="russie.html" alt="Russie" title="Russie">
+      <area shape="poly" coords="60,200,150,220,190,170,120,120" href="etats_unies.html" alt="Etats-Unis" title="États-Unis">
+      <area shape="poly" coords="260,150,285,165,295,145,265,130" href="allemagne.html" alt="Allemagne" title="Allemagne">
+      <area shape="poly" coords="320,220,335,235,360,225,345,205" href="turquie.html" alt="Turquie" title="Turquie">
+      <area shape="poly" coords="350,650,375,660,410,640,380,620" href="argentine.html" alt="Argentine" title="Argentine">
+      <area shape="poly" coords="375,340,395,350,405,340,385,325" href="liban.html" alt="Liban" title="Liban">
+      <area shape="poly" coords="210,410,235,425,250,415,225,400" href="maroc.html" alt="Maroc" title="Maroc">
+      <area shape="poly" coords="60,340,110,370,150,340,100,310" href="mexique.html" alt="Mexique" title="Mexique">
+      <area shape="poly" coords="700,260,750,275,770,260,730,245" href="chine.html" alt="Chine" title="Chine">
+      <area shape="poly" coords="650,380,700,400,740,370,690,355" href="inde.html" alt="Inde" title="Inde">
+      <area shape="poly" coords="250,260,265,280,290,270,275,250" href="grece.html" alt="Grèce" title="Grèce">
+    </map>
+  </div>
+
+  <div class="grid">
+    <a href="france.html" class="country-box"> 
+      <img src="image_france.png" alt="France">
+      <div class="country-name">France</div>
+    </a>
+    <a href="japon.html" class="country-box">
+      <img src="image_japon.png" alt="Japon">
+      <div class="country-name">Japon</div>
+    </a>
+    <a href="bresil.html" class="country-box">
+      <img src="image_bresil.png" alt="Brésil">
+      <div class="country-name">Brésil</div>
+    </a>
+    <a href="angleterre.html" class="country-box">
+      <img src="image_angleterre.png" alt="Angleterre">
+      <div class="country-name">Angleterre</div>
+    </a>
+    <a href="italie.html" class="country-box">
+      <img src="image_italie.png" alt="Italie">
+      <div class="country-name">Italie</div>
+    </a>
+    <a href="espagne.html" class="country-box">
+      <img src="image_espagne.png" alt="Espagne">
+      <div class="country-name">Espagne</div>
+    </a>
+    <a href="russie.html" class="country-box">
+      <img src="image_russie.png" alt="Russie">
+      <div class="country-name">Russie</div>
+    </a>
+    <a href="etats_unies.html" class="country-box">
+      <img src="image_Etats_Unies.png" alt="Etats Unies">
+      <div class="country-name">Etats Unies</div>
+    </a>
+    <a href="allemagne.html" class="country-box">
+      <img src="image_allemagne.png" alt="Allemagne">
+      <div class="country-name">Allemagne</div>
+    </a>
+    <a href="turquie.html" class="country-box">
+      <img src="image_turquie.png" alt="Turquie">
+      <div class="country-name">Turquie</div>
+    </a>
+    <a href="argentine.html" class="country-box">
+      <img src="image_argentine.png" alt="Argentine">
+      <div class="country-name">Argentine</div>
+    </a>
+    <a href="liban.html" class="country-box">
+      <img src="image_liban.png" alt="Liban">
+      <div class="country-name">Liban</div>
+    </a>
+    <a href="maroc.html" class="country-box">
+      <img src="image_maroc.png" alt="Maroc">
+      <div class="country-name">Maroc</div>
+    </a>
+    <a href="mexique.html" class="country-box">
+      <img src="image_mexique.png" alt="Mexique">
+      <div class="country-name">Mexique</div>
+    </a>
+    <a href="chine.html" class="country-box">
+      <img src="image_chine.png" alt="Chine">
+      <div class="country-name">Chine</div>
+    </a>
+    <a href="inde.html" class="country-box">
+      <img src="image_inde.png" alt="Inde">
+      <div class="country-name">Inde</div>
+    </a>
+    <a href="grece.html" class="country-box">
+      <img src="image_grece.png" alt="Grèce">
+      <div class="country-name">Grèce</div>
+    </a>
+  </div>
+
+</body>
+</html>
   <title>Explore le Monde</title>
   <style>
     body {
