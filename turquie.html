@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spécialités Turques</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 30px 20px;
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dish-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .dish-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .dish-info {
+      padding: 15px 20px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dish-info h3 {
+      margin-top: 10px;
+      font-size: 1.3em;
+      color: #34495e;
+    }
+
+    .dish-info p {
+      margin: 10px 0 0;
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🇹🇷 Les Délices de la Cuisine Turque</h1>
+
+  <div class="grid">
+    <div class="dish-card">
+      <img src="image_kebab.png" alt="Kebab">
+      <div class="dish-info">
+        <h3>Kebab</h3>
+        <p>Viande grillée en brochette ou en tranches fines, servie avec du pain pita et des légumes.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_borek.png" alt="Börek">
+      <div class="dish-info">
+        <h3>Börek</h3>
+        <p>Pâtisserie feuilletée farcie de fromage, viande hachée ou épinards, croustillante et savoureuse.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_pide.png" alt="Pide">
+      <div class="dish-info">
+        <h3>Pide</h3>
+        <p>Pizza turque en forme de bateau, garnie de viande hachée, fromage ou légumes.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_dolma.png" alt="Dolma">
+      <div class="dish-info">
+        <h3>Dolma</h3>
+        <p>Feuilles de vigne farcies de riz, viande et épices, souvent servies froides.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_baklava.png" alt="Baklava">
+      <div class="dish-info">
+        <h3>Baklava</h3>
+        <p>Feuilleté aux noix et miel, délicieusement sucré et fondant.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
