@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spécialités Argentines</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 30px 20px;
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dish-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .dish-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .dish-info {
+      padding: 15px 20px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dish-info h3 {
+      margin-top: 10px;
+      font-size: 1.3em;
+      color: #34495e;
+    }
+
+    .dish-info p {
+      margin: 10px 0 0;
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🇦🇷 Les Délices de la Cuisine Argentine</h1>
+
+  <div class="grid">
+    <div class="dish-card">
+      <img src="image_asado.png" alt="Asado">
+      <div class="dish-info">
+        <h3>Asado</h3>
+        <p>Grillades de viande cuite lentement sur un barbecue, servies avec des sauces et du pain.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_empanadas.png" alt="Empanadas">
+      <div class="dish-info">
+        <h3>Empanadas</h3>
+        <p>Chaussons farcis de viande, fromage ou légumes, cuits au four ou frits.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_milanesa.png" alt="Milanesa">
+      <div class="dish-info">
+        <h3>Milanesa</h3>
+        <p>Escalope de viande panée et frite, souvent accompagnée de purée ou salade.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_choripan.png" alt="Choripán">
+      <div class="dish-info">
+        <h3>Choripán</h3>
+        <p>Saucisse grillée servie dans un pain, garnie de sauce chimichurri.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_dulce_de_leche.png" alt="Dulce de leche">
+      <div class="dish-info">
+        <h3>Dulce de Leche</h3>
+        <p>Crème caramel onctueuse, utilisée dans les desserts ou tartinée.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
