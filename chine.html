@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -85,7 +86,7 @@
     </div>
 
     <div class="dish-card">
-      <img src="image_canard_laque.png" alt="Canard Laqué">
+      <img id="canard" src="image_canard_laque.png" alt="Canard Laqué" onclick="changerImage()">
       <div class="dish-info">
         <h3>Canard Laqué</h3>
         <p>Canard rôti à la peau croustillante et à la chair tendre, servi avec des crêpes fines et de la sauce hoisin.</p>
@@ -116,6 +117,19 @@
       </div>
     </div>
   </div>
+
+  <script>
+    function changerImage() {
+      const image = document.getElementById("canard");
+      if (image.src.includes("image_canard_laque.png")) {
+        image.src = "image_tofu.png";
+        image.alt = "Easter egg : Viande souvent critiqué en Europe";
+      } else {
+        image.src = "image_canard_laque.png";
+        image.alt = "Canard Laqué";
+      }
+    }
+  </script>
 
 </body>
 </html>
