@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spécialités Marocaines</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 30px 20px;
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dish-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .dish-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .dish-info {
+      padding: 15px 20px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dish-info h3 {
+      margin-top: 10px;
+      font-size: 1.3em;
+      color: #34495e;
+    }
+
+    .dish-info p {
+      margin: 10px 0 0;
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🇲🇦 Les Délices de la Cuisine Marocaine</h1>
+
+  <div class="grid">
+    <div class="dish-card">
+      <img src="image_couscous.png" alt="Couscous">
+      <div class="dish-info">
+        <h3>Couscous</h3>
+        <p>Semoule accompagnée de légumes mijotés, de viande et de pois chiches, parfumée aux épices.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_tajine.png" alt="Tajine">
+      <div class="dish-info">
+        <h3>Tajine</h3>
+        <p>Plat mijoté dans un plat en terre cuite, avec de la viande, des légumes et des fruits secs.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_pastilla.png" alt="Pastilla">
+      <div class="dish-info">
+        <h3>Pastilla</h3>
+        <p>Feuilleté sucré-salé à base de pigeon ou de poulet, d'amandes et de cannelle.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_harira.png" alt="Harira">
+      <div class="dish-info">
+        <h3>Harira</h3>
+        <p>Soupe traditionnelle aux tomates, lentilles, pois chiches et viande, parfumée au persil et à la coriandre.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_chebakia.png" alt="Chebakia">
+      <div class="dish-info">
+        <h3>Chebakia</h3>
+        <p>Pâtisserie en forme de fleur, frite et trempée dans du miel, saupoudrée de graines de sésame.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
