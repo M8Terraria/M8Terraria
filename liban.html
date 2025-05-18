@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spécialités Libanaises</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 30px 20px;
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dish-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .dish-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .dish-info {
+      padding: 15px 20px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dish-info h3 {
+      margin-top: 10px;
+      font-size: 1.3em;
+      color: #34495e;
+    }
+
+    .dish-info p {
+      margin: 10px 0 0;
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🇱🇧 Les Délices de la Cuisine Libanaise</h1>
+
+  <div class="grid">
+    <div class="dish-card">
+      <img src="image_taboule.png" alt="Taboulé">
+      <div class="dish-info">
+        <h3>Taboulé</h3>
+        <p>Salade fraîche à base de persil, menthe, tomates, oignons et boulgour, arrosée de jus de citron.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_houmous.png" alt="Houmous">
+      <div class="dish-info">
+        <h3>Houmous</h3>
+        <p>Purée de pois chiches, tahini, ail et jus de citron, crémeuse et savoureuse.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_falafel.png" alt="Falafel">
+      <div class="dish-info">
+        <h3>Falafel</h3>
+        <p>Boulettes de pois chiches frites, croustillantes à l'extérieur et tendres à l'intérieur.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_kafta.png" alt="Kafta">
+      <div class="dish-info">
+        <h3>Kafta</h3>
+        <p>Brochettes de viande hachée parfumée aux herbes et épices, grillées à la perfection.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_baklawa.png" alt="Baklawa">
+      <div class="dish-info">
+        <h3>Baklawa</h3>
+        <p>Pâtisserie feuilletée garnie de pistaches et arrosée de sirop de fleur d'oranger.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
