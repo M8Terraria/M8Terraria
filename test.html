@@ -11,19 +11,33 @@
       margin: 0;
       padding: 20px;
     }
-
     h1 {
       text-align: center;
       color: #2c3e50;
     }
-
+    .svg-container {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0;
+    }
+    svg {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      display: block;
+    }
+    .country-link:hover {
+      opacity: 0.6;
+      cursor: pointer;
+      outline: 2px solid #2c3e50;
+    }
+    /* Galerie */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 20px;
       padding: 20px;
     }
-
     .country-box {
       position: relative;
       cursor: pointer;
@@ -32,17 +46,14 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
     }
-
     .country-box:hover {
       transform: scale(1.05);
     }
-
     .country-box img {
       width: 100%;
       height: auto;
       display: block;
     }
-
     .country-name {
       position: absolute;
       bottom: 0;
@@ -60,34 +71,32 @@
 
   <h1>🌍 Explore les Spécialités du Monde</h1>
 
-  <!-- Carte interactive centrée -->
+  <!-- Carte SVG interactive -->
   <h2>Carte interactive</h2>
-  <div style="text-align: center;">
-    <div style="position: relative; display: inline-block; max-width: 100%;">
-      <img src="image_carte.png" alt="Carte du Monde" style="width: 100%; max-width: 600px; display: block;" />
-      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
-        <div
-          style="position: absolute; left: 40%; top: 30%; width: 5%; height: 5%; background-color: rgba(255, 0, 0, 0.4); border-radius: 5px; pointer-events: auto; transition: background-color 0.3s ease;"
-          onclick="location.href='france.html'"
-          tabindex="0"
-          role="link"
-          title="France"
-          aria-label="Lien vers France"
-          onmouseover="this.style.backgroundColor='rgba(0, 128, 0, 0.6)'"
-          onmouseout="this.style.backgroundColor='rgba(255, 0, 0, 0.4)'"
-        ></div>
-        <div
-          style="position: absolute; left: 80%; top: 20%; width: 5%; height: 5%; background-color: rgba(255, 0, 0, 0.4); border-radius: 5px; pointer-events: auto; transition: background-color 0.3s ease;"
-          onclick="location.href='japon.html'"
-          tabindex="0"
-          role="link"
-          title="Japon"
-          aria-label="Lien vers Japon"
-          onmouseover="this.style.backgroundColor='rgba(0, 128, 0, 0.6)'"
-          onmouseout="this.style.backgroundColor='rgba(255, 0, 0, 0.4)'"
-        ></div>
-      </div>
-    </div>
+  <div class="svg-container">
+    <!-- SVG extrait de image_carte3.csv, avec chaque pays rendu cliquable -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 2752.766 1537.631"
+      width="800"
+      height="447"
+      aria-label="Carte du monde interactive"
+    >
+      <!-- Exemple pour la France : il faut connaître l'ID ou la forme correspondante dans le SVG -->
+      <a xlink:href="france.html" tabindex="0">
+        <g id="FR" class="country-link" title="France" aria-label="France">
+          <!-- Remplacer le chemin ci-dessous par celui de la France dans le SVG -->
+          <path d="M500,600 l50,0 l0,50 l-50,0 Z" fill="#3b82f6" stroke="#fff" />
+        </g>
+      </a>
+      <a xlink:href="japon.html" tabindex="0">
+        <g id="JP" class="country-link" title="Japon" aria-label="Japon">
+          <!-- Remplacer le chemin ci-dessous par celui du Japon dans le SVG -->
+          <ellipse cx="2200" cy="800" rx="30" ry="60" fill="#ef4444" stroke="#fff"/>
+        </g>
+      </a>
+      <!-- Ajouter ici d'autres pays selon leur chemin/ID d'origine dans le SVG -->
+    </svg>
   </div>
 
   <!-- Galerie classique -->
@@ -161,18 +170,6 @@
       <div class="country-name">Grèce</div>
     </a>
   </div>
-
-  <script>
-    // Permet d'ouvrir le lien avec Enter ou Espace sur les zones de la carte
-    document.querySelectorAll('div[role="link"]').forEach(zone => {
-      zone.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          zone.click();
-        }
-      });
-    });
-  </script>
 
 </body>
 </html>
