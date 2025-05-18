@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spécialités Mexicaines</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 30px 20px;
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dish-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .dish-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .dish-info {
+      padding: 15px 20px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dish-info h3 {
+      margin-top: 10px;
+      font-size: 1.3em;
+      color: #34495e;
+    }
+
+    .dish-info p {
+      margin: 10px 0 0;
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🇲🇽 Les Délices de la Cuisine Mexicaine</h1>
+
+  <div class="grid">
+    <div class="dish-card">
+      <img src="image_tacos.png" alt="Tacos">
+      <div class="dish-info">
+        <h3>Tacos</h3>
+        <p>Galettes de maïs garnies de viande, de légumes et de sauce, servies avec du citron vert.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_guacamole.png" alt="Guacamole">
+      <div class="dish-info">
+        <h3>Guacamole</h3>
+        <p>Purée d'avocat assaisonnée de tomates, oignons, coriandre et jus de citron.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_chili_con_carne.png" alt="Chili con Carne">
+      <div class="dish-info">
+        <h3>Chili con Carne</h3>
+        <p>Plat épicé à base de viande hachée, haricots rouges, tomates et piments.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_quesadillas.png" alt="Quesadillas">
+      <div class="dish-info">
+        <h3>Quesadillas</h3>
+        <p>Galettes de maïs ou de blé, garnies de fromage fondu, souvent accompagnées de salsa.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_churros.png" alt="Churros">
+      <div class="dish-info">
+        <h3>Churros</h3>
+        <p>Pâtisseries frites et sucrées, souvent servies avec du chocolat chaud pour tremper.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
