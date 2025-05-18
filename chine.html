@@ -1,1 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spécialités Chinoises</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 30px 20px;
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dish-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .dish-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .dish-info {
+      padding: 15px 20px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dish-info h3 {
+      margin-top: 10px;
+      font-size: 1.3em;
+      color: #34495e;
+    }
+
+    .dish-info p {
+      margin: 10px 0 0;
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🇨🇳 Les Délices de la Cuisine Chinoise</h1>
+
+  <div class="grid">
+    <div class="dish-card">
+      <img src="image_nouilles.png" alt="Nouilles sautées">
+      <div class="dish-info">
+        <h3>Nouilles sautées</h3>
+        <p>Pâtes fines sautées avec des légumes, de la viande ou du tofu, assaisonnées de sauce soja et d'épices.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img id="canard" src="image_canard_laque.png" alt="Canard Laqué" onclick="changerImage()">
+      <div class="dish-info">
+        <h3 id="titre-canard">Canard Laqué</h3>
+        <p id="desc-canard">Canard rôti à la peau croustillante et à la chair tendre, servi avec des crêpes fines et de la sauce hoisin.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_ravioli_chinois.png" alt="Ravioli chinois">
+      <div class="dish-info">
+        <h3>Ravioli chinois</h3>
+        <p>Raviolis farcis à la viande, aux légumes ou aux fruits de mer, cuits à la vapeur ou frits.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_riz_cantonais.png" alt="Riz Cantonais">
+      <div class="dish-info">
+        <h3>Riz Cantonais</h3>
+        <p>Riz sauté avec des légumes, des œufs, du jambon et des crevettes, assaisonné de sauce soja.</p>
+      </div>
+    </div>
+
+    <div class="dish-card">
+      <img src="image_soupe_aigre_douce.png" alt="Soupe Aigre-Douce">
+      <div class="dish-info">
+        <h3>Soupe Aigre-Douce</h3>
+        <p>Soupe chaude à base de bouillon, de vinaigre, de piments et de légumes, parfois agrémentée de viande.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function changerImage() {
+      const image = document.getElementById("canard");
+      const titre = document.getElementById("titre-canard");
+      const description = document.getElementById("desc-canard");
+      if (image.src.includes("image_canard_laque.png")) {
+        image.src = "image_tofu.png";
+        image.alt = "Easter egg";
+        titre.textContent = "Easter egg";
+        description.textContent = "Viande très critiqués en Europe, mais malgré tout préparés dans certaines régions de chine";
+      } else {
+        image.src = "image_canard_laque.png";
+        image.alt = "Canard Laqué";
+        titre.textContent = "Canard Laqué";
+        description.textContent = "Canard rôti à la peau croustillante et à la chair tendre, servi avec des crêpes fines et de la sauce hoisin.";
+      }
+    }
+  </script>
+
+</body>
+</html>
 
