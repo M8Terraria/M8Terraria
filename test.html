@@ -24,12 +24,29 @@
       margin-bottom: 40px;
     }
 
+    .carte-relative {
+      position: relative;
+      display: inline-block;
+      /* Pour que les pins suivent la taille de l'image */
+      max-width: 100%;
+    }
+
     img[usemap] {
       max-width: 100%;
       height: auto;
       cursor: pointer;
       border-radius: 10px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+      display: block;
+    }
+
+    .pin {
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      transform: translate(-50%, -100%);
+      pointer-events: none; /* Non cliquable */
+      z-index: 2;
     }
 
     .grid {
@@ -78,28 +95,48 @@
 
   <h1>🌍 Explore les Spécialités du Monde</h1>
 
-  <!-- Carte interactive centrée -->
+  <!-- Carte interactive centrée avec épingles -->
   <div class="carte-container">
-    <img src="image_carte4.png" usemap="#image-map" alt="Carte du monde interactive">
-    <map name="image-map">
-      <area target="" alt="France" title="France" href="france.html" coords="499,158,503,153,513,154,515,148,512,138,516,133,506,126,499,122,496,126,489,129,479,134,490,144,487,153" shape="poly">
-      <area target="" alt="Japon" title="Japon" href="japon.html" coords="941,201,948,204,973,187,973,151,956,145,956,158,965,170,960,178,947,184,938,191" shape="poly">
-      <area target="" alt="Angleterre" title="Angleterre" href="angleterre.html" coords="477,128,494,124,497,117,484,92,474,93,474,102,481,111" shape="poly">
-      <area target="" alt="Italie" title="Italie" href="italie.html" coords="514,149,517,143,530,140,532,152,547,160,554,169,540,179,532,176,537,166,527,157" shape="poly">
-      <area target="" alt="Espagne" title="Espagne" href="espagne.html" coords="476,184,490,177,489,167,500,160,478,153,462,153,468,160,464,178" shape="poly">
-      <area target="" alt="Russie" title="Russie" href="russie.html" coords="577,91,580,103,595,113,609,126,624,129,624,136,617,145,651,161,648,140,643,126,654,117,684,122,681,111,710,104,717,111,729,107,747,121,758,122,769,127,777,129,784,122,801,126,806,114,818,125,836,127,856,126,870,126,868,112,879,111,900,129,917,134,925,133,929,143,925,148,929,155,938,154,962,137,938,110,921,108,912,98,929,89,945,91,949,80,961,86,978,114,986,129,984,143,991,137,992,117,992,106,987,95,976,82,995,87,1007,75,1002,67,1022,72,1021,61,961,48,924,51,907,44,879,41,868,31,841,28,808,36,779,32,754,27,716,15,709,21,736,27,716,31,705,42,681,39,659,52,629,54,618,56,579,52,581,67,588,75,579,80" shape="poly">
-      <area target="" alt="Etats Unies" title="Etats Unies" href="etats_unies.html" coords="83,89,124,51,51,53,31,63,6,87,5,103,30,99,83,88,98,132,71,166,73,194,93,200,115,201,121,212,130,207,139,224,159,208,172,212,177,205,190,207,200,226,205,215,208,198,231,185,247,164,269,148,269,136,253,144,232,148,212,140,189,132,98,132,83,89" shape="poly">
-      <area target="" alt="Allemagne" title="Allemagne" href="allemagne.html" coords="515,113,511,124,519,129,519,136,532,136,537,131,531,124,538,123,537,113,529,111,521,109" shape="poly">
-      <area target="" alt="Turquie" title="Turquie" href="turquie.html" coords="581,158,594,163,611,161,632,165,641,170,640,178,625,180,605,181,589,183,579,174" shape="poly">
-      <area target="" alt="Argentine" title="Argentine" href="argentine.html" coords="292,481,293,490,280,495,277,502,270,502,274,512,272,522,280,530,274,549,254,539,251,507,243,469,245,432,250,425,263,425,277,435,280,445,294,440,292,449,286,456,284,469" shape="poly">
-      <area target="" alt="Liban" title="Liban" href="liban.html" coords="613,199,617,192,611,191,608,199" shape="poly">
-      <area target="" alt="Maroc" title="Maroc" href="maroc.html" coords="427,246,441,246,441,238,447,238,446,225,459,224,459,218,444,219,438,226" shape="poly">
-      <area target="" alt="Mexique" title="Mexique" href="mexique.html" coords="80,199,106,202,117,211,124,216,129,208,139,225,139,242,142,256,153,255,161,250,165,244,176,243,171,254,164,259,158,261,153,269,142,264,130,267,110,254,110,239,93,218,91,204,88,205,96,234,88,230,82,219,81,208" shape="poly">
-      <area target="" alt="Chine" title="Chine" href="chine.html" coords="865,133,875,116,884,118,901,131,917,136,928,136,924,152,919,164,906,170,900,162,892,172,899,181,909,176,903,188,915,200,918,216,913,231,897,240,886,246,888,258,881,254,878,244,865,237,856,240,849,244,839,231,837,218,829,210,817,217,807,218,787,214,765,201,765,192,769,182,759,188,751,182,743,173,742,169,757,162,760,153,756,149,764,147,763,139,772,141,768,136,771,132,779,136,788,139,792,147,807,149,812,155,818,155,835,160,852,160,860,156,862,147,872,147,881,140,872,135" shape="poly">
-      <area target="" alt="Inde" title="Inde" href="inde.html" coords="744,193,757,188,763,196,763,204,770,208,770,215,781,220,786,221,793,224,802,223,802,229,804,240,797,253,786,266,780,270,778,290,787,302,780,309,779,298,769,301,760,284,754,270,748,255,749,244,741,247,734,245,740,241,730,237,740,233,734,222,738,217,745,217,750,207,751,200" shape="poly">
-      <area target="" alt="Grèce" title="Grèce" href="grece.html" coords="563,164,573,162,580,170,583,179,578,178,565,176,560,171" shape="poly">
-      <area target="" alt="Brésil" title="Brésil" href="bresil.html" coords="301,318,305,328,298,342,308,344,315,338,324,341,326,348,339,347,350,351,358,356,362,370,353,380,347,389,348,404,344,422,338,429,319,437,320,452,305,474,304,468,294,462,289,462,300,448,298,441,295,434,289,427,283,429,280,415,284,410,280,401,271,403,269,388,261,386,253,385,249,375,235,383,230,374,220,373,218,364,221,355,231,350,233,341,232,331,240,327,246,329,254,327,251,318,256,320,262,316,267,313,269,321,270,327,274,330,279,327,286,324,293,327" shape="poly">
-    </map>
+    <div class="carte-relative">
+      <img src="image_carte4.png" usemap="#image-map" alt="Carte du monde interactive" id="carte-monde">
+      <!-- Pins (positions calculées à partir des coordonnées de chaque pays) -->
+      <img src="image_pin.png" class="pin" alt="Pin France"     style="left:501px; top:143px;">
+      <img src="image_pin.png" class="pin" alt="Pin Japon"      style="left:955px; top:175px;">
+      <img src="image_pin.png" class="pin" alt="Pin Angleterre" style="left:482px; top:112px;">
+      <img src="image_pin.png" class="pin" alt="Pin Italie"     style="left:533px; top:155px;">
+      <img src="image_pin.png" class="pin" alt="Pin Espagne"    style="left:477px; top:169px;">
+      <img src="image_pin.png" class="pin" alt="Pin Russie"     style="left:799px; top:120px;">
+      <img src="image_pin.png" class="pin" alt="Pin Etats Unies" style="left:142px; top:154px;">
+      <img src="image_pin.png" class="pin" alt="Pin Allemagne"  style="left:526px; top:122px;">
+      <img src="image_pin.png" class="pin" alt="Pin Turquie"    style="left:612px; top:168px;">
+      <img src="image_pin.png" class="pin" alt="Pin Argentine"  style="left:272px; top:474px;">
+      <img src="image_pin.png" class="pin" alt="Pin Liban"      style="left:612px; top:195px;">
+      <img src="image_pin.png" class="pin" alt="Pin Maroc"      style="left:441px; top:230px;">
+      <img src="image_pin.png" class="pin" alt="Pin Mexique"    style="left:120px; top:230px;">
+      <img src="image_pin.png" class="pin" alt="Pin Chine"      style="left:871px; top:176px;">
+      <img src="image_pin.png" class="pin" alt="Pin Inde"       style="left:761px; top:240px;">
+      <img src="image_pin.png" class="pin" alt="Pin Grèce"      style="left:573px; top:171px;">
+      <img src="image_pin.png" class="pin" alt="Pin Brésil"     style="left:294px; top:363px;">
+      <map name="image-map">
+        <area target="" alt="France" title="France" href="france.html" coords="499,158,503,153,513,154,515,148,512,138,516,133,506,126,499,122,496,126,489,129,479,134,490,144,487,153" shape="poly">
+        <area target="" alt="Japon" title="Japon" href="japon.html" coords="941,201,948,204,973,187,973,151,956,145,956,158,965,170,960,178,947,184,938,191" shape="poly">
+        <area target="" alt="Angleterre" title="Angleterre" href="angleterre.html" coords="477,128,494,124,497,117,484,92,474,93,474,102,481,111" shape="poly">
+        <area target="" alt="Italie" title="Italie" href="italie.html" coords="514,149,517,143,530,140,532,152,547,160,554,169,540,179,532,176,537,166,527,157" shape="poly">
+        <area target="" alt="Espagne" title="Espagne" href="espagne.html" coords="476,184,490,177,489,167,500,160,478,153,462,153,468,160,464,178" shape="poly">
+        <area target="" alt="Russie" title="Russie" href="russie.html" coords="577,91,580,103,595,113,609,126,624,129,624,136,617,145,651,161,648,140,643,126,654,117,684,122,681,111,710,104,717,111,729,107,747,121,758,122,769,127,777,129,784,122,801,126,806,114,818,125,836,127,856,126,870,126,868,112,879,111,900,129,917,134,925,133,929,143,925,148,929,155,938,154,962,137,938,110,921,108,912,98,929,89,945,91,949,80,961,86,978,114,986,129,984,143,991,137,992,117,992,106,987,95,976,82,995,87,1007,75,1002,67,1022,72,1021,61,961,48,924,51,907,44,879,41,868,31,841,28,808,36,779,32,754,27,716,15,709,21,736,27,716,31,705,42,681,39,659,52,629,54,618,56,579,52,581,67,588,75,579,80" shape="poly">
+        <area target="" alt="Etats Unies" title="Etats Unies" href="etats_unies.html" coords="83,89,124,51,51,53,31,63,6,87,5,103,30,99,83,88,98,132,71,166,73,194,93,200,115,201,121,212,130,207,139,224,159,208,172,212,177,205,190,207,200,226,205,215,208,198,231,185,247,164,269,148,269,136,253,144,232,148,212,140,189,132,98,132,83,89" shape="poly">
+        <area target="" alt="Allemagne" title="Allemagne" href="allemagne.html" coords="515,113,511,124,519,129,519,136,532,136,537,131,531,124,538,123,537,113,529,111,521,109" shape="poly">
+        <area target="" alt="Turquie" title="Turquie" href="turquie.html" coords="581,158,594,163,611,161,632,165,641,170,640,178,625,180,605,181,589,183,579,174" shape="poly">
+        <area target="" alt="Argentine" title="Argentine" href="argentine.html" coords="292,481,293,490,280,495,277,502,270,502,274,512,272,522,280,530,274,549,254,539,251,507,243,469,245,432,250,425,263,425,277,435,280,445,294,440,292,449,286,456,284,469" shape="poly">
+        <area target="" alt="Liban" title="Liban" href="liban.html" coords="613,199,617,192,611,191,608,199" shape="poly">
+        <area target="" alt="Maroc" title="Maroc" href="maroc.html" coords="427,246,441,246,441,238,447,238,446,225,459,224,459,218,444,219,438,226" shape="poly">
+        <area target="" alt="Mexique" title="Mexique" href="mexique.html" coords="80,199,106,202,117,211,124,216,129,208,139,225,139,242,142,256,153,255,161,250,165,244,176,243,171,254,164,259,158,261,153,269,142,264,130,267,110,254,110,239,93,218,91,204,88,205,96,234,88,230,82,219,81,208" shape="poly">
+        <area target="" alt="Chine" title="Chine" href="chine.html" coords="865,133,875,116,884,118,901,131,917,136,928,136,924,152,919,164,906,170,900,162,892,172,899,181,909,176,903,188,915,200,918,216,913,231,897,240,886,246,888,258,881,254,878,244,865,237,856,240,849,244,839,231,837,218,829,210,817,217,807,218,787,214,765,201,765,192,769,182,759,188,751,182,743,173,742,169,757,162,760,153,756,149,764,147,763,139,772,141,768,136,771,132,779,136,788,139,792,147,807,149,812,155,818,155,835,160,852,160,860,156,862,147,872,147,881,140,872,135" shape="poly">
+        <area target="" alt="Inde" title="Inde" href="inde.html" coords="744,193,757,188,763,196,763,204,770,208,770,215,781,220,786,221,793,224,802,223,802,229,804,240,797,253,786,266,780,270,778,290,787,302,780,309,779,298,769,301,760,284,754,270,748,255,749,244,741,247,734,245,740,241,730,237,740,233,734,222,738,217,745,217,750,207,751,200" shape="poly">
+        <area target="" alt="Grèce" title="Grèce" href="grece.html" coords="563,164,573,162,580,170,583,179,578,178,565,176,560,171" shape="poly">
+        <area target="" alt="Brésil" title="Brésil" href="bresil.html" coords="301,318,305,328,298,342,308,344,315,338,324,341,326,348,339,347,350,351,358,356,362,370,353,380,347,389,348,404,344,422,338,429,319,437,320,452,305,474,304,468,294,462,289,462,300,448,298,441,295,434,289,427,283,429,280,415,284,410,280,401,271,403,269,388,261,386,253,385,249,375,235,383,230,374,220,373,218,364,221,355,231,350,233,341,232,331,240,327,246,329,254,327,251,318,256,320,262,316,267,313,269,321,270,327,274,330,279,327,286,324,293,327" shape="poly">
+      </map>
+    </div>
   </div>
 
   <!-- Grille de drapeaux (optionnelle) -->
