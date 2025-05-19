@@ -16,7 +16,20 @@
       text-align: center;
       color: #2c3e50;
     }
-
+    .info-message {
+      text-align: center
+      background-color: #e0f7fa;
+      border-left: 6px solid #0097a7;
+      color: #01579b;
+      padding: 14px 18px;
+      margin: 20px 0 24px 0;
+      border-radius: 7px;
+      font-size: 1.13em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 6px rgba(0,151,167,0.07);
+    }
     .carte-container {
       display: flex;
       justify-content: center;
@@ -94,12 +107,14 @@
 <body>
 
   <h1>🌍 Explore les Spécialités du Monde</h1>
-
-  <!-- Carte interactive centrée avec épingles -->
+  <div class="info-message">
+    🗺️ Clique sur la <strong>carte</strong> pour sélectionner un pays et découvrir ses spécialités culinaires !
+  </div>
+  
   <div class="carte-container">
     <div class="carte-relative">
       <img src="image_carte4.png" usemap="#image-map" alt="Carte du monde interactive" id="carte-monde">
-      <!-- Pins (positions calculées à partir des coordonnées de chaque pays) -->
+      
       <img src="image_pin.png" class="pin" alt="Pin France"     style="left:501px; top:143px;">
       <img src="image_pin.png" class="pin" alt="Pin Japon"      style="left:970px; top:180px;">
       <img src="image_pin.png" class="pin" alt="Pin Angleterre" style="left:489px; top:112px;">
@@ -139,7 +154,9 @@
     </div>
   </div>
 
-  <!-- Grille de drapeaux (optionnelle) -->
+  <div class="info-message">
+    👉 Ou cliquez sur <strong>un des boutons ci-dessous</strong> :
+  </div>
   <div class="grid">
     <a href="france.html" class="country-box"> 
       <img src="image_france.png" alt="France">
